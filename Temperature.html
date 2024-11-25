@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        c;
+
+        checkC(){
+            return this.c > -273;
+        }
+
+        changeCtoF() {
+            return (this.c * 9/5) + 32;
+        }
+        changeCtoK() {
+            return this.c + 273.15;
+        }
+
+
+        constructor(c) {
+            this._c = c;
+        }
+
+
+        getC() {
+            return this.c;
+        }
+
+        setC(value) {
+            this.c = value;
+        }
+    }
+
+    let newC = new Temperature();
+    newC.setC(25);
+    if (newC.checkC()){
+        console.log("C -> F = " + newC.changeCtoF());
+        console.log("C -> K = " + newC.changeCtoK());
+    }else {
+        console.log("C < -273");
+    }
+</script>
+</body>
+</html>
