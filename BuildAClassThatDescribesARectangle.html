@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build a class that describes a rectangle</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        length;
+        weight;
+
+        constructor(length, weight) {
+            this.length = length;
+            this.weight = weight;
+        }
+
+        calculateArea () {
+            return this.length * this.weight;
+        }
+
+        calculatePerimeter () {
+            return 2 * (this.length + this.weight);
+        }
+
+
+        getLength() {
+            return this.length;
+        }
+
+        setLength(value) {
+            this.length = value;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(value) {
+            this.weight = value;
+        }
+    }
+
+
+    let newRectangle = new Rectangle(5,7);
+    newRectangle.setLength(3);
+    newRectangle.setLength(10);
+    console.log("Are = " + newRectangle.calculateArea());
+    console.log("Perimeter = " + newRectangle.calculatePerimeter());
+
+</script>
+</body>
+</html>
